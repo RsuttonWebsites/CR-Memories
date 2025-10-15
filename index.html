@@ -1,27 +1,51 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Our Story</title>
+    <title>100 Memories</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
-    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❤️</text></svg>">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400&display=swap"
+        rel="stylesheet">
+    <link rel="icon"
+        href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>❤️</text></svg>">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/app-icon.png">
 </head>
+
 <body>
 
     <div class="petals-container"></div>
+    <div class="music-player-container">
+        <audio id="musicPlayer" src="songs/october.mp3"></audio>
+        <button id="playMusicBtn" class="play-btn">Play Music</button>
+    </div>
+
 
     <header>
         <h1>4 Years of Memories</h1>
-        <p>A collection of moments that have built our story.</p>
+        <p>100 Memories.</p>
     </header>
 
     <main id="timeline">
-        </main>
+    </main>
+
+
 
     <script src="app.js"></script>
+
+    <script>
+        const playBtn = document.getElementById('playMusicBtn');
+        const player = document.getElementById('musicPlayer');
+        playBtn.addEventListener('click', function() {
+            player.play();
+            playBtn.style.display = 'none';
+        });
+    </script>
+
 </body>
+
 </html>

@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (Math.random() > 0.3) {
             item = document.createElement('div');
             item.classList.add('petal');
-            const size = Math.random() * 8 + 6; // 6px to 14px
+            const size = Math.random() * 8 + 10; // 10px to 18px
             item.style.width = `${size}px`;
             item.style.height = `${size}px`;
             item.style.backgroundColor = i % 2 === 0 ? '#ffb6c1' : '#ffc0cb';
@@ -68,14 +68,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     function createTimelineItem(memory) {
         const itemDiv = document.createElement('div');
-        
-        // --- ADDING RANDOM SCROLL ANIMATION ---
-        const animations = ['animate-up', 'animate-left', 'animate-right'];
-        const randomAnimation = animations[Math.floor(Math.random() * animations.length)];
-        itemDiv.classList.add('timeline-item', randomAnimation);
+        itemDiv.classList.add('timeline-item');
 
         let imageHTML = '';
-        // More robust check for an image filename
         if (memory.image && memory.image.trim() !== '') {
             imageHTML = `<img src="images/${memory.image.trim()}" alt="Memory" class="timeline-image">`;
         }

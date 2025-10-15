@@ -1,3 +1,38 @@
+/* Music Player Styles */
+.music-player-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem auto;
+    padding: 1.5rem;
+    background: rgba(255, 240, 245, 0.85);
+    border-radius: 20px;
+    box-shadow: 0 4px 16px rgba(220, 20, 60, 0.08);
+    max-width: 350px;
+}
+
+.music-player-container audio {
+    width: 100%;
+    margin-bottom: 1rem;
+    accent-color: #dc143c;
+}
+
+.play-btn {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    background: #dc143c;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 0.7rem 2rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(220, 20, 60, 0.12);
+    transition: background 0.2s;
+}
+.play-btn:hover {
+    background: #b22234;
+}
 /* General Styles & Fonts */
 :root {
     --primary-color: #2c3e50;
